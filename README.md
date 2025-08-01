@@ -1,4 +1,4 @@
-# 🤖 Task 1: Simulating Walking Motion Using Servo Motors
+# 🤖 Walking Motion Using Servo Motors
 
 ## 🧠 Objective
 
