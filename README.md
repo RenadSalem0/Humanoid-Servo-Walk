@@ -30,41 +30,6 @@ This simulation demonstrates:
 - Then holding all servos at a 90° neutral position.
 
 ---
-
-## 📋 Algorithm for Walking Steps:
-**1. Initialization**
-- **Attach Servos:** Connect hip and knee servos to microcontroller pins.
-- **Set Neutral Positions:** Initialize both servos at ~90° to simulate standing.
-
-**2. Define Parameters**
-- **Step Length**
-- **Foot Lift Height**
-- **Speed (Delay between moves)**
-
-**3. Walking Loop (Per Leg)**
-➤ **Lift the Leg:**
-- *Hip Servo:* Increase angle (e.g., 90° → 120°)
-- *Knee Servo:* Decrease angle to lift foot (e.g., 90° → 60°)
-- *Delay:* Small pause to ensure smooth motion
-
-➤ **Swing Leg Forward:**
-- *Hip Servo:* Return to 90° or swing forward
-- *Knee Servo:* Straighten (e.g., 60° → 90°)
-
-➤ **Lower the Leg:**
-- *Knee Servo:* Lower the foot (e.g., 90° → 120°)
-- *Hip Servo:* Stabilize (keep at 90°)
-
-➤ **Shift Weight:**
-- Adjust the opposite hip servo to shift body weight to the front leg
-
-**4. Repeat for Opposite Leg**
-- Mirror the above sequence for the other leg
-
-**5. Continuous Loop**
-- Repeat the walking cycle with continuous angle/speed adjustments for both hips and knees to maintain balance and motion.
----
-
 ## 💻 Arduino Code
 
 ```cpp
@@ -108,6 +73,40 @@ void moveAllServos(int angle) {
   myservo4.write(angle);
 }
 ```
+---
+## 📋 Algorithm for Walking Steps:
+**1. Initialization**
+- **Attach Servos:** Connect hip and knee servos to microcontroller pins.
+- **Set Neutral Positions:** Initialize both servos at ~90° to simulate standing.
+
+**2. Define Parameters**
+- **Step Length**
+- **Foot Lift Height**
+- **Speed (Delay between moves)**
+
+**3. Walking Loop (Per Leg)**
+➤ **Lift the Leg:**
+- *Hip Servo:* Increase angle (e.g., 90° → 120°)
+- *Knee Servo:* Decrease angle to lift foot (e.g., 90° → 60°)
+- *Delay:* Small pause to ensure smooth motion
+
+➤ **Swing Leg Forward:**
+- *Hip Servo:* Return to 90° or swing forward
+- *Knee Servo:* Straighten (e.g., 60° → 90°)
+
+➤ **Lower the Leg:**
+- *Knee Servo:* Lower the foot (e.g., 90° → 120°)
+- *Hip Servo:* Stabilize (keep at 90°)
+
+➤ **Shift Weight:**
+- Adjust the opposite hip servo to shift body weight to the front leg
+
+**4. Repeat for Opposite Leg**
+- Mirror the above sequence for the other leg
+
+**5. Continuous Loop**
+- Repeat the walking cycle with continuous angle/speed adjustments for both hips and knees to maintain balance and motion.
+---
 ## 🖼️ Circuit Preview
 
 ![Tinkercad Circuit Screenshot](Screenshotservo.png)
