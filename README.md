@@ -88,10 +88,10 @@ void moveAllServos(int angle) {
   myservo2.write(angle);
   myservo3.write(angle);
   myservo4.write(angle);
+}
 ```
 ## 🖼️ Circuit Preview
 
-![Tinkercad Circuit Screenshot](Screenshot servo.png)
+![Tinkercad Circuit Screenshot](Screenshotservo.png)
 
-}
 
