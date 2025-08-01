@@ -74,6 +74,12 @@ void moveAllServos(int angle) {
 }
 ```
 ---
+## 🖼️ Circuit Preview
+
+![Tinkercad Circuit Screenshot](Screenshotservo.png)
+
+---
+## Algorithm: Walking Motion Execution
 ## 📋 Algorithm for Walking Steps:
 **1. Initialization**
 - **Attach Servos:** Connect hip and knee servos to microcontroller pins.
@@ -106,9 +112,3 @@ void moveAllServos(int angle) {
 
 **5. Continuous Loop**
 - Repeat the walking cycle with continuous angle/speed adjustments for both hips and knees to maintain balance and motion.
----
-## 🖼️ Circuit Preview
-
-![Tinkercad Circuit Screenshot](Screenshotservo.png)
-
-
