@@ -31,20 +31,45 @@ This simulation demonstrates:
 
 ---
 
-## 📋 Algorithm for Walking Simulation
+## 📋 Algorithm for Walking Steps:
+**1. Initialization**
+- **Attach Servos:** Connect hip and knee servos to microcontroller pins.
+- **Set Neutral Positions:** Initialize both servos at ~90° to simulate standing.
 
-### 1. Initialization:
-- Attach all 4 servos to designated Arduino pins.
-- Set all servos to 90° to simulate a standing robot.
+**2. Define Parameters**
+- **Step Length**
+- **Foot Lift Height**
+- **Speed (Delay between moves)**
 
-### 2. Walking Motion (Conceptual):
-- **Lift Leg**: Rotate hip servo forward + bend knee.
-- **Swing Forward**: Straighten the leg forward.
-- **Lower Foot**: Place leg down and balance.
-- **Repeat for Opposite Leg**
+---
 
-This motion is emulated with a sweep movement for testing servo ranges.
+**3. Walking Loop (Per Leg)**
 
+➤ **Lift the Leg:**
+- *Hip Servo:* Increase angle (e.g., 90° → 120°)
+- *Knee Servo:* Decrease angle to lift foot (e.g., 90° → 60°)
+- *Delay:* Small pause to ensure smooth motion
+
+➤ **Swing Leg Forward:**
+- *Hip Servo:* Return to 90° or swing forward
+- *Knee Servo:* Straighten (e.g., 60° → 90°)
+
+➤ **Lower the Leg:**
+- *Knee Servo:* Lower the foot (e.g., 90° → 120°)
+- *Hip Servo:* Stabilize (keep at 90°)
+
+➤ **Shift Weight:**
+- Adjust the opposite hip servo to shift body weight to the front leg
+
+---
+
+**4. Repeat for Opposite Leg**
+- Mirror the above sequence for the other leg
+
+---
+
+**5. Continuous Loop**
+- Repeat the walking cycle with continuous angle/speed adjustments for both hips and knees to maintain balance and motion.
 ---
 
 ## 💻 Arduino Code
