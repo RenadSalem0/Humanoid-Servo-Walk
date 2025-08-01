@@ -79,7 +79,7 @@ void moveAllServos(int angle) {
 ![Tinkercad Circuit Screenshot](Screenshotservo.png)
 
 ---
-# 📋 Algorithm: Walking Motion Execution
+# 📋 Algorithm: Humanoid Robot Walking Motionn
 **1. Initialization**
 - **Attach Servos:** Connect hip and knee servos to microcontroller pins.
 - **Set Neutral Positions:** Initialize both servos at ~90° to simulate standing.
