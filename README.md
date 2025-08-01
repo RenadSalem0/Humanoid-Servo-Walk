@@ -41,10 +41,7 @@ This simulation demonstrates:
 - **Foot Lift Height**
 - **Speed (Delay between moves)**
 
----
-
 **3. Walking Loop (Per Leg)**
-
 ➤ **Lift the Leg:**
 - *Hip Servo:* Increase angle (e.g., 90° → 120°)
 - *Knee Servo:* Decrease angle to lift foot (e.g., 90° → 60°)
@@ -61,12 +58,8 @@ This simulation demonstrates:
 ➤ **Shift Weight:**
 - Adjust the opposite hip servo to shift body weight to the front leg
 
----
-
 **4. Repeat for Opposite Leg**
 - Mirror the above sequence for the other leg
-
----
 
 **5. Continuous Loop**
 - Repeat the walking cycle with continuous angle/speed adjustments for both hips and knees to maintain balance and motion.
