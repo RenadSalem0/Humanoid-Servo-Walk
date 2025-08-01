@@ -90,6 +90,7 @@ void moveAllServos(int angle) {
 - **Speed (Delay between moves)**
 
 **3. Walking Loop (Per Leg)**
+
 ➤ **Lift the Leg:**
 - *Hip Servo:* Increase angle (e.g., 90° → 120°)
 - *Knee Servo:* Decrease angle to lift foot (e.g., 90° → 60°)
